@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  Passing Data Using Segue
 //
 //  Created by Md Khaled Hasan Manna on 27/8/20.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
-    @IBAction func nextBtnAction(_ sender: Any) {
     }
     
-}
 
+
+}
