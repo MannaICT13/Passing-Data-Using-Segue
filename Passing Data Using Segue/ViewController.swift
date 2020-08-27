@@ -11,13 +11,35 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
     }
 
     @IBAction func nextBtnAction(_ sender: Any) {
+    
+        self.performSegue(withIdentifier: "segueIdentifier", sender: self)
+        
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        guard let nameTxt = nameTextField.text else{return}
+        
+        if segue.identifier == "segueIdentifier"{
+            let nextVC = segue.destination as! SecondViewController
+            nextVC.name = nameTxt
+            
+            
+            
+        }
+    }
+    
+    
     
 }
 

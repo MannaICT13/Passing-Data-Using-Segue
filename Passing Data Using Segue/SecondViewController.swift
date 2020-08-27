@@ -12,9 +12,12 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var nameLbl: UILabel!
     
+    var name :String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameLbl.text = name
     }
     
 
